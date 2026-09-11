@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Reset Individual — 7 Dias | Thales Cardo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --bg-soft:#111113;
+    --card:#151517;
+    --line:#232326;
+    --text:#f2f0ec;
+    --muted:#9c9a98;
+    --muted-2:#6f6d6b;
+    --gold:#e8722c;
+    --gold-bright:#ff8c3f;
+    --gold-dim:#a34d1a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  .wrap{max-width:560px;margin:0 auto;padding:0 24px}
+  img,video{max-width:100%;display:block}
+
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    letter-spacing:-0.01em;
+    color:var(--text);
+  }
+
+  .rule{height:1px;background:var(--line);width:100%}
+
+  /* ---------- BLOCO 1 : ABERTURA ---------- */
+  .hero{
+    padding:28px 0 24px;
+    text-align:center;
+  }
+  .hero .kicker{
+    font-size:12px;
+    color:var(--gold);
+    font-weight:600;
+    letter-spacing:0.04em;
+    margin-bottom:12px;
+  }
+  .hero h1{
+    font-size:22px;
+    line-height:1.28;
+    margin-bottom:0;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--gold-bright);
+  }
+  .hero .lede{
+    font-size:15px;
+    color:var(--muted);
+    margin-top:12px;
+    line-height:1.55;
+  }
+  .hero .offer-line{
+    margin-top:28px;
+    font-size:15px;
+    color:var(--text);
+  }
+  .price-tag{
+    display:inline-flex;
+    align-items:baseline;
+    gap:6px;
+    margin:22px 0 6px;
+  }
+  .price-tag .num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:56px;
+    color:var(--gold-bright);
+    line-height:1;
+  }
+  .price-tag .cur{
+    font-size:20px;
+    color:var(--gold);
+    font-weight:600;
+  }
+
+  .btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    background:var(--gold-bright);
+    color:#141008;
+    font-weight:700;
+    font-size:17px;
+    padding:18px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    letter-spacing:0.01em;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{ background:#f2cd84; transform:translateY(-1px); }
+  .btn:active{ transform:translateY(0); }
+
+  .microcopy{
+    text-align:center;
+    font-size:13px;
+    color:var(--muted-2);
+    margin-top:12px;
+    letter-spacing:0.01em;
+  }
+
+  section{ padding:52px 0; }
+  section.tight{ padding:36px 0; }
+
+  /* ---------- BLOCO 2 : VÍDEO ---------- */
+  .video-intro{
+    text-align:center;
+    font-size:15px;
+    color:var(--muted);
+    margin-bottom:20px;
+  }
+  .video-frame{
+    position:relative;
+    width:100%;
+    aspect-ratio:9/16;
+    max-width:280px;
+    max-height:58vh;
+    margin:0 auto;
+    background:linear-gradient(150deg,#1a1a1d,#0d0d0e);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .video-frame video{
+    width:100%;height:100%;object-fit:cover;
+  }
+  .video-placeholder{
+    text-align:center;
+    color:var(--muted-2);
+    font-size:13px;
+    padding:0 30px;
+  }
+  .video-placeholder .play{
+    width:56px;height:56px;
+    border-radius:50%;
+    border:1.5px solid var(--gold-dim);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 16px;
+    color:var(--gold);
+    font-size:20px;
+  }
+
+  /* ---------- BLOCO 3 : O QUE VOCÊ VAI RECEBER ---------- */
+  .section-label{
+    font-size:14px;
+    color:var(--gold);
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  h2.section-title{
+    font-size:26px;
+    line-height:1.28;
+    margin-bottom:32px;
+  }
+
+  .item-list{ display:flex; flex-direction:column; gap:22px; }
+  .item{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .item .mark{
+    flex-shrink:0;
+    width:6px;height:6px;
+    border-radius:50%;
+    background:var(--gold);
+    margin-top:9px;
+  }
+  .item .body b{
+    display:block;
+    font-size:16px;
+    color:var(--text);
+    margin-bottom:4px;
+    font-weight:700;
+  }
+  .item .body span{
+    font-size:15px;
+    color:var(--muted);
+    line-height:1.55;
+  }
+
+  /* ---------- BLOCO 4 : O GRANDE PONTO ---------- */
+  .point-block{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:32px 26px;
+  }
+  .point-block p{
+    font-size:16px;
+    color:var(--muted);
+    margin-bottom:14px;
+    line-height:1.6;
+  }
+  .point-block p.accent{
+    color:var(--text);
+    font-weight:600;
+  }
+  .point-block p:last-child{ margin-bottom:0; }
+  .point-block .divider-word{
+    color:var(--gold-bright);
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:19px;
+    margin:22px 0;
+    text-align:center;
+  }
+
+  /* ---------- BLOCO 5 : AUTORIDADE ---------- */
+  .authority-num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:44px;
+    color:var(--gold-bright);
+    line-height:1;
+    margin-bottom:6px;
+  }
+  .authority-cap{
+    font-size:14px;
+    color:var(--muted);
+    margin-bottom:28px;
+  }
+  .testimonial-frame{
+    width:100%;
+    aspect-ratio:9/16;
+    max-width:320px;
+    margin:28px auto 0;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  .testimonial-frame img,
+  .testimonial-frame video{ width:100%;height:100%;object-fit:cover; }
+  .testimonial-placeholder{
+    text-align:center;
+    color:var(--muted-2);
+    font-size:13px;
+    padding:0 24px;
+  }
+
+  /* ---------- BLOCO 6 : COMO FUNCIONA ---------- */
+  .steps{ display:flex; flex-direction:column; }
+  .step{
+    display:flex;
+    gap:20px;
+    padding:22px 0;
+    border-top:1px solid var(--line);
+  }
+  .step:first-child{ border-top:none; }
+  .step .n{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:15px;
+    color:var(--gold);
+    flex-shrink:0;
+    width:32px;
+  }
+  .step .t b{
+    display:block;
+    font-size:16px;
+    margin-bottom:4px;
+    color:var(--text);
+  }
+  .step .t span{
+    font-size:15px;
+    color:var(--muted);
+    line-height:1.55;
+  }
+
+  /* ---------- BLOCO 7 / 8 : PARA QUEM É / NÃO É ---------- */
+  .fit-card{
+    border-radius:14px;
+    padding:28px 24px;
+    margin-bottom:16px;
+  }
+  .fit-card.yes{
+    background:linear-gradient(160deg, rgba(212,162,76,0.09), rgba(212,162,76,0.02));
+    border:1px solid rgba(212,162,76,0.25);
+  }
+  .fit-card.no{
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+  }
+  .fit-card h3{
+    font-size:18px;
+    margin-bottom:18px;
+    font-weight:700;
+  }
+  .fit-card.yes h3{ color:var(--gold-bright); }
+  .fit-card.no h3{ color:var(--muted); }
+  .fit-row{
+    display:flex;
+    gap:12px;
+    padding:9px 0;
+    font-size:15px;
+    line-height:1.5;
+  }
+  .fit-row .ico{ flex-shrink:0; font-size:15px; margin-top:1px; }
+  .fit-card.yes .ico{ color:var(--gold); }
+  .fit-card.no .ico{ color:var(--muted-2); }
+  .fit-card.yes .fit-row span{ color:var(--text); }
+  .fit-card.no .fit-row span{ color:var(--muted); }
+
+  /* ---------- BLOCO 9 : OFERTA ---------- */
+  .offer-card{
+    background:linear-gradient(165deg, #17140b, #0a0a0b 60%);
+    border:1px solid var(--gold-dim);
+    border-radius:16px;
+    padding:36px 28px;
+    text-align:center;
+  }
+  .offer-card .tag{
+    font-size:13px;
+    letter-spacing:0.04em;
+    color:var(--gold);
+    font-weight:600;
+    margin-bottom:16px;
+  }
+  .offer-card h2{
+    font-size:24px;
+    margin-bottom:24px;
+    line-height:1.3;
+  }
+  .offer-includes{
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-bottom:30px;
+    padding:0 4px;
+  }
+  .offer-includes .fit-row span{ color:var(--text); font-size:14.5px; }
+  .offer-card .price-tag{ margin:8px 0 4px; }
+  .offer-card .price-note{
+    font-size:14px;
+    color:var(--muted);
+    margin-bottom:26px;
+  }
+
+  /* ---------- BLOCO 10 : ESCASSEZ ---------- */
+  .scarcity h2{ font-size:24px; margin-bottom:20px; }
+  .scarcity p{ font-size:16px; color:var(--muted); margin-bottom:12px; line-height:1.6; }
+  .scarcity p.tight-line{ margin-bottom:2px; }
+  .scarcity .btn{ margin-top:28px; }
+
+  /* ---------- BLOCO 11 : FAQ ---------- */
+  .faq-item{
+    border-top:1px solid var(--line);
+    padding:20px 0;
+  }
+  .faq-item summary{
+    list-style:none;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:16px;
+    font-weight:600;
+    color:var(--text);
+  }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary .plus{
+    color:var(--gold);
+    font-size:20px;
+    flex-shrink:0;
+    margin-left:16px;
+    transition:transform .2s ease;
+    font-weight:400;
+  }
+  .faq-item[open] summary .plus{ transform:rotate(45deg); }
+  .faq-item p{
+    font-size:15px;
+    color:var(--muted);
+    margin-top:14px;
+    line-height:1.6;
+    padding-right:8px;
+  }
+
+  /* ---------- FINAL ---------- */
+  .final{
+    text-align:center;
+    padding:56px 0 72px;
+  }
+  .final p.line{
+    font-size:17px;
+    color:var(--muted);
+    margin-bottom:4px;
+  }
+  .final .stack{
+    margin:26px 0;
+  }
+  .final .stack span{
+    display:block;
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:20px;
+    color:var(--text);
+    margin-bottom:2px;
+  }
+  .final .stack span.g{ color:var(--gold-bright); }
+  .final .closing{
+    margin-top:38px;
+    font-size:15px;
+    color:var(--muted);
+    font-style:italic;
+    font-family:'Fraunces',serif;
+    line-height:1.6;
+  }
+
+  .sticky-bar{
+    position:fixed;
+    bottom:0;left:0;right:0;
+    background:rgba(10,10,11,0.92);
+    backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);
+    padding:12px 20px;
+    display:none;
+    z-index:50;
+  }
+  .sticky-bar.show{ display:block; }
+  .sticky-bar .inner{
+    max-width:560px;margin:0 auto;
+    display:flex; align-items:center; gap:14px;
+  }
+  .sticky-bar .price{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    color:var(--gold-bright);
+    font-size:18px;
+    white-space:nowrap;
+  }
+  .sticky-bar .btn{ padding:13px 16px; font-size:15px; }
+
+  @media (min-width:600px){
+    .hero h1{ font-size:40px; }
+    .price-tag .num{ font-size:64px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== BLOCO 1 — ABERTURA ===================== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">✅ CADASTRO CONFIRMADO</div>
+    <h1>Seu ebook foi enviado para o seu e-mail.</h1>
+    <p class="lede" style="margin-top:10px;">Em breve você irá recebê-lo. <em style="font-style:italic; color:var(--gold-bright);">Enquanto isso, veja esse vídeo</em> 👇</p>
+  </div>
+</section>
+
+<!-- ===================== BLOCO 2 — VÍDEO (visível já na primeira tela) ===================== -->
+<section class="tight" style="padding-top:0;">
+  <div class="wrap">
+    <div class="video-frame" id="videoFrameWrap" onclick="tocarVideoPrincipal()">
+      <video id="videoApresentacao" playsinline loop>
+        <source src="video-explicacao.mp4" type="video/mp4">
+      </video>
+      <div id="playOverlay" style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; background:rgba(0,0,0,0.35); cursor:pointer;">
+        <div style="width:72px; height:72px; border-radius:50%; border:2px solid var(--gold); display:flex; align-items:center; justify-content:center; margin-bottom:16px; background:rgba(0,0,0,0.4);">
+          <span style="color:var(--gold-bright); font-size:26px; margin-left:4px;">▶</span>
+        </div>
+        <p style="color:#fff; font-size:15px; font-weight:600; letter-spacing:0.02em;">Clique para reproduzir</p>
+      </div>
+    </div>
+
+    <p class="lede" style="margin-top:24px;">
+      7 dias de acompanhamento individual comigo + acesso ao Desafio de 28 Dias.
+      Uma experiência prática para começar a transformar aquilo que você já sabe que precisa mudar na sua vida.
+    </p>
+
+    <div id="ofertaReveal" style="opacity:0; max-height:0; overflow:hidden; transition:opacity .6s ease;">
+      <div class="price-tag">
+        <span class="cur">R$</span><span class="num">19,90</span>
+      </div>
+      <p class="offer-line">Acompanhamento individual — vagas limitadas pela capacidade de atendimento.</p>
+      <a href="https://checkout4.xgrow.com/pt/3b6ba364-6956-4b33-8bbe-952f1a864909/ODAyMjY=" class="btn" style="margin-top:26px;">Quero começar</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // toca o vídeo principal com som quando a pessoa clica no play
+  function tocarVideoPrincipal(){
+    const video = document.getElementById('videoApresentacao');
+    const overlay = document.getElementById('playOverlay');
+    video.muted = false;
+    video.play();
+    overlay.style.display = 'none';
+  }
+
+  // preço e botão aparecem automaticamente 30s depois de carregar a página
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      const el = document.getElementById('ofertaReveal');
+      el.style.maxHeight = '400px';
+      el.style.opacity = '1';
+    }, 30000);
+  });
+</script>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ===================== BLOCO 3 — O QUE VOCÊ VAI RECEBER ===================== -->
+<section>
+  <div class="wrap">
+    <div class="section-label">O QUE VOCÊ VAI RECEBER</div>
+    <h2 class="section-title">Não é apenas um desafio. É o começo de um processo.</h2>
+
+    <div class="item-list">
+      <div class="item">
+        <div class="mark"></div>
+        <div class="body">
+          <b>Desafio de 28 dias</b>
+          <span>Um guia estruturado para você trabalhar diferentes áreas da sua vida e começar a construir novos padrões.</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="mark"></div>
+        <div class="body">
+          <b>7 dias de acompanhamento individual</b>
+          <span>Durante uma semana, você terá acompanhamento comigo para não precisar enfrentar esse processo completamente sozinho.</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="mark"></div>
+        <div class="body">
+          <b>Direcionamento personalizado</b>
+          <span>Vamos olhar para aquilo que está acontecendo na sua realidade, e não simplesmente seguir uma fórmula genérica.</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="mark"></div>
+        <div class="body">
+          <b>Ações práticas</b>
+          <span>Você vai transformar conhecimento em ação através de atividades direcionadas para o seu processo.</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="mark"></div>
+        <div class="body">
+          <b>Acompanhamento da evolução</b>
+          <span>Conforme você avança, identificamos dificuldades, ajustamos o caminho e trabalhamos o que estiver impedindo sua evolução.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ===================== BLOCO 4 — O GRANDE PONTO ===================== -->
+<section>
+  <div class="wrap">
+    <div class="point-block">
+      <p class="accent">O problema talvez nunca tenha sido falta de informação.</p>
+      <p>Você provavelmente já sabe muita coisa. Já viu vídeos. Já salvou conteúdos. Já prometeu que iria mudar. Já começou alguma rotina nova — talvez várias vezes.</p>
+      <p>Mas começar é fácil.</p>
+      <div class="divider-word">O difícil é continuar quando a motivação acaba.</div>
+      <p>É perceber onde você está se sabotando. É saber o que fazer quando você trava. É sair da teoria e colocar aquilo em prática.</p>
+      <p class="accent">É por isso que existe o acompanhamento.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ===================== BLOCO 5 — AUTORIDADE E PROVA SOCIAL ===================== -->
+<section>
+  <div class="wrap">
+    <div class="section-label">POR QUE EU</div>
+    <h2 class="section-title">Eu não estou começando esse trabalho agora.</h2>
+
+    <div class="authority-num">R$10.000</div>
+    <p class="authority-cap">foi o investimento de acompanhamentos individuais que já realizei em processos de transformação.</p>
+
+    <div class="point-block" style="margin-top:26px;">
+      <p>Hoje eu quero criar uma experiência diferente: mais curta, mais direta e muito mais acessível.</p>
+      <p>Durante 7 dias, você vai poder experimentar de perto como é ter um acompanhamento individual — e perceber o que pode começar a mudar quando você deixa de tentar resolver tudo sozinho.</p>
+      <p class="accent">Mas não precisa acreditar apenas no que eu estou dizendo.</p>
+    </div>
+
+    <div class="testimonial-frame">
+      <video controls playsinline>
+        <source src="depoimento-full.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ===================== BLOCO 6 — COMO FUNCIONA ===================== -->
+<section>
+  <div class="wrap">
+    <div class="section-label">COMO FUNCIONA</div>
+    <h2 class="section-title">O que acontece nos 7 dias.</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="n">01</div>
+        <div class="t"><b>Entender</b><span>Vamos entender onde você está hoje e o que mais está impedindo sua evolução.</span></div>
+      </div>
+      <div class="step">
+        <div class="n">02</div>
+        <div class="t"><b>Direcionar</b><span>Definimos o que precisa receber sua atenção primeiro.</span></div>
+      </div>
+      <div class="step">
+        <div class="n">03</div>
+        <div class="t"><b>Agir</b><span>Você começa a colocar em prática ações específicas para o seu momento.</span></div>
+      </div>
+      <div class="step">
+        <div class="n">04</div>
+        <div class="t"><b>Acompanhar</b><span>Durante os 7 dias, eu acompanho sua evolução e faço os ajustes necessários.</span></div>
+      </div>
+      <div class="step">
+        <div class="n">05</div>
+        <div class="t"><b>Consolidar</b><span>Ao final, você terá não apenas conhecimento, mas uma experiência prática do que acontece quando começa a agir de forma diferente.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ===================== BLOCO 7 / 8 — PARA QUEM É / NÃO É ===================== -->
+<section>
+  <div class="wrap">
+    <div class="fit-card yes">
+      <h3>Essa experiência é para você se...</h3>
+      <div class="fit-row"><span class="ico">✓</span><span>Você sente que está vivendo no automático.</span></div>
+      <div class="fit-row"><span class="ico">✓</span><span>Sabe que precisa mudar, mas continua adiando.</span></div>
+      <div class="fit-row"><span class="ico">✓</span><span>Começa coisas e não consegue manter consistência.</span></div>
+      <div class="fit-row"><span class="ico">✓</span><span>Quer melhorar sua disciplina e seu foco.</span></div>
+      <div class="fit-row"><span class="ico">✓</span><span>Quer cuidar melhor de si mesmo.</span></div>
+      <div class="fit-row"><span class="ico">✓</span><span>Está cansado de apenas consumir conteúdo e não colocar em prática.</span></div>
+      <div class="fit-row"><span class="ico">✓</span><span>Quer alguém para acompanhar seus primeiros passos.</span></div>
+    </div>
+
+    <div class="fit-card no">
+      <h3>E talvez isso não seja para você se...</h3>
+      <div class="fit-row"><span class="ico">✕</span><span>Você está procurando uma fórmula mágica.</span></div>
+      <div class="fit-row"><span class="ico">✕</span><span>Espera mudar sem precisar fazer nada.</span></div>
+      <div class="fit-row"><span class="ico">✕</span><span>Não está disposto a olhar para os próprios hábitos e comportamentos.</span></div>
+      <div class="fit-row"><span class="ico">✕</span><span>Quer apenas consumir mais um conteúdo e continuar exatamente como está.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BLOCO 9 — A OFERTA ===================== -->
+<section id="oferta">
+  <div class="wrap">
+    <div class="offer-card">
+      <div class="tag">A OFERTA</div>
+      <h2>7 dias de acompanhamento individual<br>+ Desafio de 28 dias</h2>
+
+      <div class="offer-includes">
+        <div class="fit-row"><span class="ico" style="color:var(--gold)">✓</span><span>Desafio completo de 28 dias</span></div>
+        <div class="fit-row"><span class="ico" style="color:var(--gold)">✓</span><span>7 dias de acompanhamento individual</span></div>
+        <div class="fit-row"><span class="ico" style="color:var(--gold)">✓</span><span>Direcionamento personalizado</span></div>
+        <div class="fit-row"><span class="ico" style="color:var(--gold)">✓</span><span>Atividades práticas</span></div>
+        <div class="fit-row"><span class="ico" style="color:var(--gold)">✓</span><span>Acompanhamento da evolução</span></div>
+        <div class="fit-row"><span class="ico" style="color:var(--gold)">✓</span><span>Encontros individuais durante o processo</span></div>
+      </div>
+
+      <div class="price-tag"><span class="cur">R$</span><span class="num">19,90</span></div>
+      <p class="price-note">Uma única experiência. 7 dias. Individual. Comigo.</p>
+
+      <a href="https://checkout4.xgrow.com/pt/3b6ba364-6956-4b33-8bbe-952f1a864909/ODAyMjY=" class="btn">Quero começar agora</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ===================== BLOCO 10 — ESCASSEZ ===================== -->
+<section class="scarcity">
+  <div class="wrap">
+    <div class="section-label">POR QUE POUCAS VAGAS</div>
+    <h2>Porque esse não é um curso gravado.</h2>
+    <p class="tight-line">Não é um grupo com milhares de pessoas.</p>
+    <p>É acompanhamento individual.</p>
+    <p>Se eu assumir o compromisso de acompanhar você, preciso ter disponibilidade real para fazer isso. Por isso, vou abrir apenas uma quantidade limitada de vagas por vez.</p>
+    <p>Quando a minha capacidade de acompanhamento estiver preenchida, as inscrições serão encerradas.</p>
+    <a href="https://checkout4.xgrow.com/pt/3b6ba364-6956-4b33-8bbe-952f1a864909/ODAyMjY=" class="btn">Quero garantir minha vaga</a>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ===================== BLOCO 11 — FAQ ===================== -->
+<section>
+  <div class="wrap">
+    <div class="section-label">PERGUNTAS FREQUENTES</div>
+    <h2 class="section-title" style="margin-bottom:8px;">Antes de você decidir.</h2>
+
+    <details class="faq-item">
+      <summary>É realmente individual? <span class="plus">+</span></summary>
+      <p>Sim. A proposta é acompanhar você individualmente durante os 7 dias.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Preciso fazer o Desafio de 28 Dias inteiro? <span class="plus">+</span></summary>
+      <p>Não. O desafio será seu material de apoio para continuar o processo. Durante a experiência, vamos trabalhar aquilo que fizer sentido para o seu momento.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Vou falar diretamente com você? <span class="plus">+</span></summary>
+      <p>Sim. O objetivo dessa experiência é justamente aproximar você do meu acompanhamento.</p>
+    </details>
+    <details class="faq-item">
+      <summary>E se eu não conseguir fazer alguma atividade? <span class="plus">+</span></summary>
+      <p>Você não precisa ser perfeito. O processo existe justamente para identificar dificuldades, ajustar e continuar.</p>
+    </details>
+    <details class="faq-item">
+      <summary>É um curso? <span class="plus">+</span></summary>
+      <p>Não. Você recebe o Desafio de 28 Dias como material, mas o diferencial dessa oferta é o acompanhamento individual durante 7 dias.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Por que custa apenas R$19,90? <span class="plus">+</span></summary>
+      <p>Porque essa é uma experiência inicial, mais curta e acessível. Quero que você tenha a oportunidade de experimentar meu trabalho na prática.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ===================== FINAL — ENCERRAMENTO ===================== -->
+<section class="final">
+  <div class="wrap">
+    <p class="line">Você pode continuar tentando mudar sozinho.</p>
+    <p class="line">Ou pode começar essa primeira semana comigo.</p>
+
+    <div class="stack">
+      <span>7 dias.</span>
+      <span>Individual.</span>
+      <span class="g">R$19,90.</span>
+    </div>
+
+    <a href="#oferta" class="btn">Quero começar</a>
+
+    <p class="closing">Sua transformação não começa quando você sabe mais.<br>Começa quando você decide fazer diferente.</p>
+  </div>
+</section>
+
+<div class="sticky-bar" id="stickyBar">
+  <div class="inner">
+    <span class="price">R$19,90</span>
+    <a href="#oferta" class="btn">Quero começar</a>
+  </div>
+</div>
+
+<script>
+  // mostra a barra fixa depois que a pessoa rola além da primeira tela
+  const bar = document.getElementById('stickyBar');
+  const hero = document.querySelector('.hero');
+  window.addEventListener('scroll', () => {
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    if (heroBottom < 0) bar.classList.add('show');
+    else bar.classList.remove('show');
+  });
+</script>
+
+</body>
+</html>
