@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Desafio de 28 Dias — Thales Cardo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --card:#151517;
+    --line:#232326;
+    --text:#f2f0ec;
+    --muted:#9c9a98;
+    --gold:#e8722c;
+    --gold-bright:#ff8c3f;
+    --gold-dim:#a34d1a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:32px 20px;
+  }
+  .wrap{ max-width:420px; width:100%; }
+
+  .kicker{
+    text-align:center;
+    font-size:13px;
+    color:var(--gold);
+    font-weight:600;
+    letter-spacing:0.04em;
+    margin-bottom:14px;
+  }
+
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:30px;
+    line-height:1.2;
+    text-align:center;
+    color:var(--text);
+    margin-bottom:14px;
+  }
+  h1 span{ color:var(--gold-bright); font-style:italic; font-weight:700; }
+
+  .lede{
+    text-align:center;
+    font-size:15px;
+    color:var(--muted);
+    line-height:1.55;
+    margin-bottom:32px;
+  }
+
+  .form-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:28px 24px 22px;
+  }
+
+  /* estiliza o formulário nativo do ActiveCampaign embutido */
+  #_form_1_ h1, #_form_1_ h2, #_form_1_ h3{
+    font-family:'Fraunces',serif !important;
+    color:var(--text) !important;
+    font-size:19px !important;
+    margin-bottom:8px !important;
+  }
+  #_form_1_ p{
+    color:var(--muted) !important;
+    font-size:14px !important;
+    line-height:1.5 !important;
+    margin-bottom:20px !important;
+  }
+  #_form_1_ input[type="text"],
+  #_form_1_ input[type="email"],
+  #_form_1_ input[type="tel"]{
+    width:100% !important;
+    background:#0d0d0e !important;
+    border:1px solid var(--line) !important;
+    color:var(--text) !important;
+    border-radius:8px !important;
+    padding:14px 16px !important;
+    font-size:15px !important;
+    margin-bottom:14px !important;
+    font-family:'Inter',sans-serif !important;
+  }
+  #_form_1_ input[type="text"]::placeholder,
+  #_form_1_ input[type="email"]::placeholder,
+  #_form_1_ input[type="tel"]::placeholder{
+    color:#5c5a58 !important;
+  }
+  #_form_1_ input[type="text"]:focus,
+  #_form_1_ input[type="email"]:focus,
+  #_form_1_ input[type="tel"]:focus{
+    outline:none !important;
+    border-color:var(--gold) !important;
+  }
+  #_form_1_ ._form-label{
+    color:var(--muted) !important;
+    font-size:13px !important;
+    font-weight:600 !important;
+    margin-bottom:6px !important;
+    display:block !important;
+  }
+  #_form_1_ button,
+  #_form_1_ input[type="submit"]{
+    width:100% !important;
+    background:var(--gold-bright) !important;
+    color:#141008 !important;
+    font-weight:700 !important;
+    font-size:16px !important;
+    padding:16px 20px !important;
+    border-radius:8px !important;
+    border:none !important;
+    cursor:pointer !important;
+    font-family:'Inter',sans-serif !important;
+    margin-top:4px !important;
+  }
+  #_form_1_ button:hover,
+  #_form_1_ input[type="submit"]:hover{
+    background:#f2a563 !important;
+  }
+  #_form_1_ ._form_element{
+    margin-bottom:2px !important;
+  }
+  #_form_1_ ._form-branding{
+    opacity:0.35 !important;
+    font-size:11px !important;
+    margin-top:16px !important;
+    text-align:center !important;
+  }
+  #_form_1_ ._form-branding a{ color:var(--muted) !important; }
+
+  .trust{
+    text-align:center;
+    font-size:13px;
+    color:#6f6d6b;
+    margin-top:20px;
+    line-height:1.5;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kicker">CONTEÚDO GRATUITO</div>
+    <h1>O <span>Desafio de 28 Dias</span> que eu mesmo usei</h1>
+    <p class="lede">Preenche seus dados abaixo e recebe o ebook completo, gratuito, direto no seu e-mail.</p>
+
+    <div class="form-card">
+      <!-- Formulário embutido do ActiveCampaign -->
+      <div class="_form_1"></div>
+      <script src="https://thalescardo14352.activehosted.com/f/embed.php?id=1" charset="utf-8"></script>
+    </div>
+
+    <p class="trust">🔒 Seus dados estão seguros. Sem spam — só o material que você pediu.</p>
+  </div>
+</body>
+</html>
