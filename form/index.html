@@ -11,7 +11,7 @@
   :root{
     --bg:#0a0a0b;
     --card:#151517;
-    --line:#232326;
+    --line:#2a2a2d;
     --text:#f2f0ec;
     --muted:#9c9a98;
     --gold:#e8722c;
@@ -64,81 +64,8 @@
     background:var(--card);
     border:1px solid var(--line);
     border-radius:16px;
-    padding:28px 24px 22px;
+    padding:28px 24px 20px;
   }
-
-  /* estiliza o formulário nativo do ActiveCampaign embutido */
-  #_form_1_ h1, #_form_1_ h2, #_form_1_ h3{
-    font-family:'Fraunces',serif !important;
-    color:var(--text) !important;
-    font-size:19px !important;
-    margin-bottom:8px !important;
-  }
-  #_form_1_ p{
-    color:var(--muted) !important;
-    font-size:14px !important;
-    line-height:1.5 !important;
-    margin-bottom:20px !important;
-  }
-  #_form_1_ input[type="text"],
-  #_form_1_ input[type="email"],
-  #_form_1_ input[type="tel"]{
-    width:100% !important;
-    background:#0d0d0e !important;
-    border:1px solid var(--line) !important;
-    color:var(--text) !important;
-    border-radius:8px !important;
-    padding:14px 16px !important;
-    font-size:15px !important;
-    margin-bottom:14px !important;
-    font-family:'Inter',sans-serif !important;
-  }
-  #_form_1_ input[type="text"]::placeholder,
-  #_form_1_ input[type="email"]::placeholder,
-  #_form_1_ input[type="tel"]::placeholder{
-    color:#5c5a58 !important;
-  }
-  #_form_1_ input[type="text"]:focus,
-  #_form_1_ input[type="email"]:focus,
-  #_form_1_ input[type="tel"]:focus{
-    outline:none !important;
-    border-color:var(--gold) !important;
-  }
-  #_form_1_ ._form-label{
-    color:var(--muted) !important;
-    font-size:13px !important;
-    font-weight:600 !important;
-    margin-bottom:6px !important;
-    display:block !important;
-  }
-  #_form_1_ button,
-  #_form_1_ input[type="submit"]{
-    width:100% !important;
-    background:var(--gold-bright) !important;
-    color:#141008 !important;
-    font-weight:700 !important;
-    font-size:16px !important;
-    padding:16px 20px !important;
-    border-radius:8px !important;
-    border:none !important;
-    cursor:pointer !important;
-    font-family:'Inter',sans-serif !important;
-    margin-top:4px !important;
-  }
-  #_form_1_ button:hover,
-  #_form_1_ input[type="submit"]:hover{
-    background:#f2a563 !important;
-  }
-  #_form_1_ ._form_element{
-    margin-bottom:2px !important;
-  }
-  #_form_1_ ._form-branding{
-    opacity:0.35 !important;
-    font-size:11px !important;
-    margin-top:16px !important;
-    text-align:center !important;
-  }
-  #_form_1_ ._form-branding a{ color:var(--muted) !important; }
 
   .trust{
     text-align:center;
@@ -146,6 +73,86 @@
     color:#6f6d6b;
     margin-top:20px;
     line-height:1.5;
+  }
+
+  /* ============ ESTILO DO FORMULÁRIO ACTIVECAMPAIGN (full embed) ============ */
+  ._form_3{
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Inter', system-ui, sans-serif !important;
+    margin: 0;
+  }
+  ._form_3 ._form-label,
+  ._form_3 ._form_element ._form-label{
+    font-family:'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    color: var(--muted) !important;
+    margin-bottom: 6px !important;
+    display: block;
+  }
+  ._form_3 .field-required{ color: var(--gold-bright) !important; }
+
+  ._form_3 input[type="text"],
+  ._form_3 input[type="tel"],
+  ._form_3 input[type="date"]{
+    background: #0d0d0e !important;
+    color: var(--text) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 8px !important;
+    padding: 13px 14px !important;
+    font-size: 15px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-family: 'Inter', sans-serif !important;
+  }
+  ._form_3 input[type="text"]::placeholder,
+  ._form_3 input[type="tel"]::placeholder{
+    color: #5c5a58 !important;
+  }
+  ._form_3 input[type="text"]:focus,
+  ._form_3 input[type="tel"]:focus{
+    outline: none !important;
+    border-color: var(--gold) !important;
+  }
+  ._form_3 ._form_element{
+    margin-bottom: 16px !important;
+  }
+  ._form_3 ._submit,
+  ._form_3 button[type="submit"]{
+    background: var(--gold-bright) !important;
+    border: none !important;
+    color: #141008 !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    padding: 15px 20px !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+    cursor: pointer !important;
+    font-family: 'Inter', sans-serif !important;
+    margin-top: 4px !important;
+  }
+  ._form_3 ._submit:hover{
+    background: #f2a563 !important;
+  }
+  ._form_3 ._form-branding{
+    opacity: 0.4 !important;
+    margin-top: 18px !important;
+    text-align: center !important;
+  }
+  ._form_3 ._form-branding ._logo{
+    margin: 6px auto 0 !important;
+  }
+  ._form_3 ._error-inner{
+    background-color: #2a1414 !important;
+    color: #ff9b9b !important;
+    font-family: 'Inter', sans-serif !important;
+  }
+  ._form_3 ._form-thank-you{
+    color: var(--text) !important;
+    font-family: 'Fraunces', serif !important;
+    font-size: 18px !important;
+    text-align: center !important;
   }
 </style>
 </head>
@@ -156,9 +163,301 @@
     <p class="lede">Preenche seus dados abaixo e recebe o ebook completo, gratuito, direto no seu e-mail.</p>
 
     <div class="form-card">
-      <!-- Formulário embutido do ActiveCampaign -->
-      <div class="_form_1"></div>
-      <script src="https://thalescardo14352.activehosted.com/f/embed.php?id=1" charset="utf-8"></script>
+<style>@import url(https://fonts.bunny.net/css?family=sans-serif:400|IBM+Plex+Sans:400);</style>
+<style>
+._form-top {
+    top: 0;
+}
+._form-bottom {
+    bottom: 0;
+}
+._form-left {
+    left: 0;
+}
+._form-right {
+    right: 0;
+}
+._submit:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+._submit.processing {
+    position: relative;
+}
+._close-icon {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 14.2px 14.2px;
+    position: absolute;
+    display: block;
+    top: 11px;
+    right: 9px;
+    overflow: hidden;
+    width: 16.2px;
+    height: 16.2px;
+}
+._form-image-left {
+    width: 150px;
+    float: left;
+}
+._form-content-right {
+    margin-left: 164px;
+}
+.form-sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+._form_element {
+    position: relative;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+._form_element * {
+    font-size: 14px;
+}
+._form_element._clear {
+    clear: both;
+    width: 100%;
+    float: none;
+}
+._form_element input[type="text"],
+._form_element input[type="date"],
+._form_element select,
+._form_element textarea:not(.g-recaptcha-response) {
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+._field-wrapper {
+    position: relative;
+}
+._form_element img._form-image {
+    max-width: 100%;
+}
+._clear-element {
+    clear: left;
+}
+._full_width {
+    width: 100%;
+}
+._error {
+    display: block;
+    position: absolute;
+    font-size: 14px;
+    z-index: 10000001;
+}
+._error._above {
+    padding-bottom: 4px;
+    bottom: 39px;
+    right: 0;
+}
+._error._below {
+    padding-top: 8px;
+    top: 100%;
+    right: 0;
+}
+._error-inner {
+    padding: 12px 12px 12px 36px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+}
+._error-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+& {
+    position: relative;
+    text-align: left;
+    margin: 0 auto;
+}
+._inline-style {
+    width: auto;
+    display: inline-block;
+}
+._form-thank-you {
+    position: relative;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+}
+</style>
+<form method="POST" action="https://thalescardo14352.activehosted.com/proc.php" id="_form_3_" class="_form _form_3 _inline-form" novalidate data-styles-version="5">
+  <input type="hidden" name="u" value="3" />
+  <input type="hidden" name="f" value="3" />
+  <input type="hidden" name="s" />
+  <input type="hidden" name="c" value="0" />
+  <input type="hidden" name="m" value="0" />
+  <input type="hidden" name="act" value="sub" />
+  <input type="hidden" name="v" value="2" />
+  <input type="hidden" name="or" value="3b619026-dfc1-4988-8855-ba849a2072ce" />
+  <div class="_form-content">
+    <div class="_form_element full_width _full_width">
+      <label for="firstname" class="_form-label">Nome<span class="field-required"> *</span></label>
+      <div class="_field-wrapper">
+        <input type="text" id="firstname" name="firstname" placeholder="Seu nome" required/>
+      </div>
+    </div>
+    <div class="_form_element _x30783791 _full_width">
+      <label for="email" class="_form-label">E-mail<span class="field-required"> *</span></label>
+      <div class="_field-wrapper">
+        <input type="text" id="email" name="email" placeholder="seu@email.com" required/>
+      </div>
+    </div>
+    <div class="_form_element _x38652557 _full_width">
+      <label for="phone" class="_form-label">WhatsApp</label>
+      <div class="_field-wrapper">
+        <input type="text" id="phone" name="phone" placeholder="(00) 00000-0000" />
+      </div>
+    </div>
+    <div class="_button-wrapper _full_width">
+      <button id="_form_3_submit" class="_submit" type="submit">Quero participar!</button>
+    </div>
+    <div class="_clear-element"></div>
+  </div>
+  <div class="_form-thank-you" style="display:none;"></div>
+  <div class="_form-branding">
+    <div class="_marketing-by" style="font-size:11px; color:#6f6d6b;">Marketing por ActiveCampaign</div>
+  </div>
+</form>
+<script>
+window.cfields = [];
+window._show_thank_you = function(id, message, trackcmp_url, email) {
+    var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
+    form.querySelector('._form-content').style.display = 'none';
+    thank_you.innerHTML = message;
+    thank_you.style.display = 'block';
+    const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
+    var visitorObject = window[vgoAlias];
+    if (email && typeof visitorObject !== 'undefined') {
+        visitorObject('setEmail', email);
+        visitorObject('update');
+    } else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+        _load_script(trackcmp_url);
+    }
+    if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+    thank_you.setAttribute('tabindex', '-1');
+    thank_you.focus();
+};
+window._show_error = function(id, message, html) {
+    var form = document.getElementById('_form_' + id + '_'),
+        err = document.createElement('div'),
+        button = form.querySelector('button[type="submit"]'),
+        old_error = form.querySelector('._form_error');
+    if (old_error) old_error.parentNode.removeChild(old_error);
+    err.innerHTML = message;
+    err.className = '_error-inner _form_error _no_arrow';
+    var wrapper = document.createElement('div');
+    wrapper.className = '_form-inner _show_be_error';
+    wrapper.appendChild(err);
+    button.parentNode.insertBefore(wrapper, button);
+    var submitButton = form.querySelector('[id^="_form"][id$="_submit"]');
+    submitButton.disabled = false;
+    submitButton.classList.remove('processing');
+    if (html) {
+        var div = document.createElement('div');
+        div.className = '_error-html';
+        div.innerHTML = html;
+        err.appendChild(div);
+    }
+};
+window._load_script = function(url, callback, isSubmit) {
+    var head = document.querySelector('head'), script = document.createElement('script'), r = false;
+    var submitButton = document.querySelector('#_form_3_submit');
+    script.charset = 'utf-8';
+    script.src = url;
+    if (callback) {
+        script.onload = script.onreadystatechange = function() {
+            if (!r && (!this.readyState || this.readyState == 'complete')) {
+                r = true;
+                callback();
+            }
+        };
+    }
+    script.onerror = function() {
+        if (isSubmit) {
+            _show_error("3", "Desculpe, seu envio falhou. Tente novamente.");
+            submitButton.disabled = false;
+            submitButton.classList.remove('processing');
+        }
+    }
+    head.appendChild(script);
+};
+(function() {
+    if (window.location.search.search("excludeform") !== -1) return false;
+    var addEvent = function(element, event, func) {
+        if (element.addEventListener) {
+            element.addEventListener(event, func);
+        } else {
+            var oldFunc = element['on' + event];
+            element['on' + event] = function() {
+                oldFunc.apply(this, arguments);
+                func.apply(this, arguments);
+            };
+        }
+    }
+    var form_to_submit = document.getElementById('_form_3_');
+    var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), submitted = false;
+
+    var validate_field = function(elem, remove) {
+        var value = elem.value, no_error = true;
+        elem.className = elem.className.replace(/ ?_has_error ?/g, '');
+        if (elem.getAttribute('required') !== null) {
+            if (value === undefined || value === null || value === '') {
+                elem.className = elem.className + ' _has_error';
+                no_error = false;
+            }
+        }
+        if (no_error && elem.name == 'email' && value) {
+            if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) {
+                elem.className = elem.className + ' _has_error';
+                no_error = false;
+            }
+        }
+        return no_error;
+    };
+    var validate_form = function(e) {
+        var no_error = true;
+        for (var i = 0, len = allInputs.length; i < len; i++) {
+            var elem = allInputs[i];
+            if (elem.getAttribute('required') !== null || (elem.name === 'email' && elem.value)) {
+                elem.value = elem.value.trim();
+                validate_field(elem) ? true : no_error = false;
+            }
+        }
+        if (!no_error && e) e.preventDefault();
+        return no_error;
+    };
+
+    var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return }var i,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"text":case"tel":case"hidden":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break}break;case"BUTTON":break}}return q.join("&")};
+
+    var form_submit = function(e) {
+        e.preventDefault();
+        if (validate_form()) {
+            var submitButton = e.target.querySelector('#_form_3_submit');
+            submitButton.disabled = true;
+            submitButton.classList.add('processing');
+            var serialized = _form_serialize(document.getElementById('_form_3_')).replace(/%0A/g, '\\n');
+            _load_script('https://thalescardo14352.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true);
+        }
+        return false;
+    };
+    addEvent(form_to_submit, 'submit', form_submit);
+})();
+</script>
     </div>
 
     <p class="trust">🔒 Seus dados estão seguros. Sem spam — só o material que você pediu.</p>
